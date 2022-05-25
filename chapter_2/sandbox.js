@@ -11,11 +11,12 @@
 
 function twoSum(nums, target) {
 	const numbers = [...nums]
-	const sum = numbers.forEach((n) => {
-		n = n + n
-	})
-	console.log(numbers, target, sum)
+	const result = nums[0] + nums[1] === target
+	// const sum = numbers.forEach((n) => {
+	// 	n = n + n
+	// })
+	console.log(numbers, target, result)
 	// your code goes here
 }
 
-twoSum([2, 4], 8)
+twoSum([3, 5], 8)
