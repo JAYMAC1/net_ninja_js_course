@@ -30,3 +30,26 @@
 // let result = email.replace('n', 'w')
 
 // console.log(result)
+
+let ninjas = ['shaun', 'ryu', 'chun-li']
+
+// let result = ninjas.concat(['James', 'Millie', 'Jess'])
+console.log(ninjas)
+ninjas.push('James')
+console.log(ninjas)
+let result = ninjas.pop()
+console.log(ninjas)
+console.log(result)
+
+// let result = ninjas.join('-')
+// console.log(ninjas)
+// console.log(ninjas.indexOf('chun-li'))
+
+// ninjas[1] = 'ken'
+// console.log(ninjas[1])
+
+// const ages = [20, 25, 30, 35]
+// ages[2] = 34
+// console.log(ages[2])
+
+// console.log(ninjas.length)
