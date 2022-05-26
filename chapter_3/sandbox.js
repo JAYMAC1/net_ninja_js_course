@@ -51,12 +51,25 @@
 // ###########################################################
 // Else & Else If
 
-const password = 'pass'
+// const password = 'pass'
 
-if (password.length >= 12) {
-  console.log('Password is super strong')
-} else if (password.length >= 8) {
-  console.log('Password is long enough')
+// if (password.length >= 12) {
+//   console.log('Password is super strong')
+// } else if (password.length >= 8) {
+//   console.log('Password is long enough')
+// } else {
+//   console.log('Password is too short')
+// }
+
+// ###########################################################
+// logical operators
+
+const password = 'password'
+
+if (password.length >= 12 && password.includes('@')) {
+  console.log('Password is super strong and valid')
+} else if (password.length >= 8 && password.includes('@')) {
+  console.log('Password is long enough and valid')
 } else {
-  console.log('Password is too short')
+  console.log('Password is too short or invalid')
 }
