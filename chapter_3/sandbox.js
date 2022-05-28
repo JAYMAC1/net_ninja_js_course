@@ -64,12 +64,19 @@
 // ###########################################################
 // logical operators
 
-const password = 'password'
+// const password = 'password'
 
-if (password.length >= 12 && password.includes('@')) {
-  console.log('Password is super strong')
-} else if (password.length >= 8 || password.includes('@')) {
-  console.log('Password is strong enough')
-} else {
-  console.log('Password is not long enough')
-}
+// if (password.length >= 12 && password.includes('@')) {
+//   console.log('Password is super strong')
+// } else if (password.length >= 8 || password.includes('@')) {
+//   console.log('Password is strong enough')
+// } else {
+//   console.log('Password is not long enough')
+// }
+
+// logical not
+
+// let user = false
+// if (!user) {
+//   console.log('User is not logged in')
+// }
