@@ -67,9 +67,9 @@
 const password = 'password'
 
 if (password.length >= 12 && password.includes('@')) {
-  console.log('Password is super strong and valid')
-} else if (password.length >= 8 && password.includes('@')) {
-  console.log('Password is long enough and valid')
+  console.log('Password is super strong')
+} else if (password.length >= 8 || password.includes('@')) {
+  console.log('Password is strong enough')
 } else {
-  console.log('Password is too short or invalid')
+  console.log('Password is not long enough')
 }
