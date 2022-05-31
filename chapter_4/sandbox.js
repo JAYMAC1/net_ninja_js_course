@@ -12,3 +12,11 @@
 // }
 
 // speak()
+
+// arguments & parameters
+
+// const speak = function (name = 'John', time = 'night') {
+//   console.log(`Good ${time}, ${name}`)
+// }
+
+// speak('James', 'afternoon')
