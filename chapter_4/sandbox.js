@@ -23,13 +23,34 @@
 
 // returning values
 
-const calcArea = function (radius) {
-	return 3.14 * radius ** 2
+// const calcArea = function (radius) {
+// 	return 3.14 * radius ** 2
+// }
+
+// const area = calcArea(69)
+// console.log(area)
+
+// const calcVol = function (area) {}
+
+// calcVol(area)
+
+// arrow functions
+
+// const calcArea = (radius) => {
+//   return 3.14 * radius ** 2
+// }
+
+// const area = calcArea(5)
+// console.log('area is', area)
+
+const greet = () => {
+  return 'Hello, world!'
 }
 
-const area = calcArea(69)
-console.log(area)
-
-const calcVol = function (area) {}
-//
-calcVol(area)
+const bill = (products, tax) => {
+  let total = 0
+  for (let i = 0; i < products.length; i++) {
+    total += products[i]
+  }
+  return total * tax
+}
