@@ -23,15 +23,13 @@
 
 // returning values
 
-// const calcArea = function (radius) {
-//   return 3.14 * radius ** 2
-// }
+const calcArea = function (radius) {
+	return 3.14 * radius ** 2
+}
 
-// const area = calcArea(69)
-// console.log(area)
+const area = calcArea(69)
+console.log(area)
 
-// const calcVol = function (area) {
-
-// }
-// //
-// calcVol(area)
+const calcVol = function (area) {}
+//
+calcVol(area)
