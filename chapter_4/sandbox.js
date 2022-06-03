@@ -58,14 +58,14 @@
 // }
 
 // console.log(bill([10, 15, 30], 0.2))
-const name = 'James'
+// const name = 'James'
 // functions
 
-const greet = () => 'hello'
-let resultOne = greet()
-console.log(resultOne)
+// const greet = () => 'hello'
+// let resultOne = greet()
+//console.log(resultOne)
 
 // methods
 
-let resultTwo = name.toUpperCase()
-console.log(resultTwo)
+//let resultTwo = name.toUpperCase()
+//console.log(resultTwo)
