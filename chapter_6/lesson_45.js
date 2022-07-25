@@ -128,8 +128,22 @@ const article = document.querySelector('article')
   console.log(title.nextElementSibling)
   console.log(title.previousElementSibling)
   
+  
+  // ########################################################################
+  // Lesson 53 - Event Basics (click events)
+  // ########################################################################
+  
+  const button = document.querySelector('button')
+  button.addEventListener('click', (e) => {
+    console.log('clicked')
+  })
+  
+  const todos = document.querySelectorAll('li')
+  todos.forEach((todo) => {
+    todo.addEventListener('click', (e) => {
+      // e.target.remove()
+      e.target.style.textDecoration = 'line-through'
+    })
+  })
+  
   */
-
-// ########################################################################
-// Lesson 53 - Event Basics (click events)
-// ########################################################################
