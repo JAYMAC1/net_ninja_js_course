@@ -146,4 +146,47 @@ const article = document.querySelector('article')
     })
   })
   
+  
+  // ########################################################################
+  // Lesson 54 - Creating & Removing Elements
+  // ########################################################################
+  
+  const list = document.querySelector('ul')
+  
+  const button = document.querySelector('button')
+  button.addEventListener('click', () => {
+    const li = document.createElement('li')
+    li.textContent = 'New Item'
+    // list.append(li)
+    list.prepend(li)
+  })
+  
+  const todos = document.querySelectorAll('li')
+  todos.forEach((todo) => {
+    todo.addEventListener('click', (e) => {
+      e.target.remove()
+    })
+  })
+  
   */
+
+// ########################################################################
+// Lesson 55 - Event Bubbling (and Delegation)
+// ########################################################################
+
+const list = document.querySelector('ul')
+
+const button = document.querySelector('button')
+button.addEventListener('click', () => {
+  const li = document.createElement('li')
+  li.textContent = 'New Item'
+  // list.append(li)
+  list.prepend(li)
+})
+
+const todos = document.querySelectorAll('li')
+todos.forEach((todo) => {
+  todo.addEventListener('click', (e) => {
+    e.target.remove()
+  })
+})
