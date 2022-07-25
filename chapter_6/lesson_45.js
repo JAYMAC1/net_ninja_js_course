@@ -96,5 +96,19 @@ console.log(title.style.margin)
 */
 
 // ########################################################################
-// Lesson 50 - Changing CSS Styles
+// Lesson 51 - Adding and Removing Classes
 // ########################################################################
+
+const content = document.querySelectorAll('p')
+
+content.forEach((p) => {
+  if (p.textContent.includes('error')) {
+    p.classList.add('error')
+  }
+  if (p.textContent.includes('success')) {
+    p.classList.add('success')
+  }
+})
+
+const title = document.querySelector('.title')
+title.classList.toggle('test')
