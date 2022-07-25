@@ -93,7 +93,6 @@ title.style.color = 'crimson'
 title.style.margin = ''
 console.log(title.style.margin)
 
-*/
 
 // ########################################################################
 // Lesson 51 - Adding and Removing Classes
@@ -112,3 +111,25 @@ content.forEach((p) => {
 
 const title = document.querySelector('.title')
 title.classList.toggle('test')
+
+
+// ########################################################################
+// Lesson 52 - Parents, Children & Siblings
+// ########################################################################
+
+const article = document.querySelector('article')
+
+// Array.from(article.children).forEach((child) => {
+  //   child.classList.add('article-element')
+  // })
+  
+  const title = document.querySelector('h2')
+  console.log(title.parentElement)
+  console.log(title.nextElementSibling)
+  console.log(title.previousElementSibling)
+  
+  */
+
+// ########################################################################
+// Lesson 53 - Event Basics (click events)
+// ########################################################################
