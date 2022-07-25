@@ -61,20 +61,40 @@ const people = ['James', 'Rachel', 'Millie', 'Jess']
 people.forEach((person) => {
   content.innerHTML += `<p>${person}</p>`
 })
-*/
+
 
 // ########################################################################
 // Lesson 49 - Getting & Setting Attributes
 // ########################################################################
 
-const link = document.querySelector('a')
+// const link = document.querySelector('a')
 
-console.log(link.getAttribute('href'))
+// console.log(link.getAttribute('href'))
 
-link.setAttribute('href', 'https://www.thenetninja.co.uk')
-link.innerText = 'The Net Ninja'
+// link.setAttribute('href', 'https://www.thenetninja.co.uk')
+// link.innerText = 'The Net Ninja'
 
-const msg = document.querySelector('p')
-console.log(msg.getAttribute('class'))
-msg.setAttribute('class', 'success')
-msg.setAttribute('style', 'color: green;')
+// const msg = document.querySelector('p')
+// console.log(msg.getAttribute('class'))
+// msg.setAttribute('class', 'success')
+// msg.setAttribute('style', 'color: green;')
+
+// ########################################################################
+// Lesson 50 - Changing CSS Styles
+// ########################################################################
+
+const title = document.querySelector('h1')
+
+// title.setAttribute('style', 'color: blue;')
+
+title.style.margin = '50px'
+title.style.fontSize = '16px'
+title.style.color = 'crimson'
+title.style.margin = ''
+console.log(title.style.margin)
+
+*/
+
+// ########################################################################
+// Lesson 50 - Changing CSS Styles
+// ########################################################################
