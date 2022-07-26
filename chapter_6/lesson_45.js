@@ -184,9 +184,18 @@ button.addEventListener('click', () => {
   list.prepend(li)
 })
 
-const todos = document.querySelectorAll('li')
-todos.forEach((todo) => {
-  todo.addEventListener('click', (e) => {
+// const items = document.querySelectorAll('li')
+// items.forEach((item) => {
+//   item.addEventListener('click', (e) => {
+//     console.log('event in LI')
+//     e.stopPropagation()
+//     e.target.remove()
+//   })
+// })
+
+list.addEventListener('click', (e) => {
+  // console.log('event in UL')
+  if (e.target.tagName === 'LI') {
     e.target.remove()
-  })
+  }
 })
