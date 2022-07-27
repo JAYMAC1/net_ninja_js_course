@@ -226,3 +226,20 @@ document.addEventListener('wheel', (e) => {
 // ########################################################################
 // Lesson 57 - Building a Popup
 // ########################################################################
+
+const button = document.querySelector('button')
+const popupWrapper = document.querySelector('.popup-wrapper')
+const closePopup = document.querySelector('.popup-close')
+
+button.addEventListener('click', (e) => {
+  console.log('button clicked')
+  popupWrapper.style.display = 'block'
+})
+
+closePopup.addEventListener('click', (e) => {
+  popupWrapper.style.display = 'none'
+})
+
+popupWrapper.addEventListener('click', (e) => {
+  popupWrapper.style.display = 'none'
+})
