@@ -42,18 +42,17 @@ console.log(result)
 */
 
 // ########################################################################
-// Lesson 62 - Basic Form Validation
+// Lesson 62/63 - Basic Form Validation
 // ########################################################################
 
 const form = document.querySelector('.signup-form')
 const feedback = document.querySelector('.feedback')
+const username = form.username.value
+const pattern = /^[a-zA-Z]{6,12}$/
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   // Validation
-
-  const username = form.username.value
-  const pattern = /^[a-zA-Z]{6,12}$/
 
   let result = pattern.test(username)
   if (result) {
@@ -62,4 +61,13 @@ form.addEventListener('submit', (e) => {
     feedback.textContent = 'username invalid'
   }
   console.log(result)
+})
+
+// live feedback
+form.username.addEventListener('keyup', (e) => {
+  if (pattern.test(e.target.value)) {
+    form.username.setAttribute('class', 'success')
+  } else {
+    form.username.setAttribute('class', 'error')
+  }
 })
