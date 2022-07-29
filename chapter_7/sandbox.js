@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
 
 
 // ########################################################################
-// Lesson 60 - Regular Expressions
+// Lesson 60/61 - Regular Expressions
 // ########################################################################
 
 const form = document.querySelector('.signup-form')
@@ -42,11 +42,11 @@ console.log(result)
 */
 
 // ########################################################################
-// Lesson 61 - BAsic Form Validation
+// Lesson 62 - Basic Form Validation
 // ########################################################################
 
 const form = document.querySelector('.signup-form')
-// const username = document.querySelector('#username')
+const feedback = document.querySelector('.feedback')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -54,9 +54,12 @@ form.addEventListener('submit', (e) => {
 
   const username = form.username.value
   const pattern = /^[a-zA-Z]{6,12}$/
-  let result = pattern.test(username.value)
-  if (!result) {
-    alert('Username must contain between 6 and 12 chars only')
+
+  let result = pattern.test(username)
+  if (result) {
+    feedback.textContent = 'username ok'
+  } else {
+    feedback.textContent = 'username invalid'
   }
   console.log(result)
 })
