@@ -65,6 +65,7 @@ form.addEventListener('submit', (e) => {
 
 // live feedback
 form.username.addEventListener('keyup', (e) => {
+  // console.log(e)
   if (pattern.test(e.target.value)) {
     form.username.setAttribute('class', 'success')
   } else {
