@@ -21,6 +21,7 @@ form.addEventListener('submit', (e) => {
   })
 
   // Output Score
+  scrollTo(0, 0)
   result.querySelector('span').textContent = `${score}%`
   result.classList.remove('d-none')
 })
