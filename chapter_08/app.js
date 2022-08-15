@@ -31,7 +31,8 @@ form.addEventListener('submit', (e) => {
     result.querySelector('span').textContent = `${output}%`
     if (output === score) {
       clearInterval(timer)
+    } else {
+      output++
     }
-    output++
   }, 10)
 })
