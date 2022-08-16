@@ -90,3 +90,19 @@
 // }, 0)
 
 // console.log(marioScore)
+
+// ########################################################################
+// Lesson 74 - Find Method
+// ########################################################################
+
+// find returns the first value that meets the criteria in callback then will
+// stop iterating the array
+
+// const scores = [10, 5, 0, 40, 30, 10, 90, 70]
+
+// const overFifty = scores.find((score) => score > 50)
+// console.log(overFifty)
+
+// ########################################################################
+// Lesson 75 - Find Sort
+// ########################################################################
