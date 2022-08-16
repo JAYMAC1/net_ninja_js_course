@@ -61,3 +61,32 @@
 // ########################################################################
 // Lesson 73 - Reduce Method
 // ########################################################################
+
+// const scores = [10, 20, 60, 40, 70, 90, 30]
+
+// Does NOT return a new array. It retruns a value
+// it uses an accumulator and current value ()
+
+// const result = scores.reduce((acc, curr) => {
+//   if (curr > 50) { // takes current value of array iteration
+// acc++ // increments the acc by 1 if true
+//   }
+//   return acc // returns the accumulator
+// }, 0) // Sets the initial value of the accumulator to zero
+// console.log(result)
+
+// const scores = [
+//   { player: 'mario', score: 50 },
+//   { player: 'yoshi', score: 30 },
+//   { player: 'mario', score: 70 },
+//   { player: 'crystal', score: 60 },
+// ]
+
+// const marioScore = scores.reduce((acc, curr) => {
+//   if (curr.player === 'mario') {
+//     acc += curr.score
+//   }
+//   return acc
+// }, 0)
+
+// console.log(marioScore)
