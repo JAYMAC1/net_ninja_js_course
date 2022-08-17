@@ -15,5 +15,14 @@ addForm.addEventListener('submit', (e) => {
   const todo = addForm.add.value.trim()
   if (todo.length) {
     generateTemplate(todo)
+    addForm.reset()
+  }
+})
+
+// delete todos
+list.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete')) {
+    console.log(e.target.parentElement)
+    e.target.parentElement.remove()
   }
 })
