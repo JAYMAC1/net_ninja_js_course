@@ -15,12 +15,20 @@ const getTodos = (resource, callback) => {
   request.send()
 }
 
-getTodos('todos/luigi.json', (err, data) => {
-  console.log(data)
-  getTodos('todos/mario.json', (err, data) => {
-    console.log(data)
-    getTodos('todos/shaun.json', (err, data) => {
-      console.log(data)
-    })
+// getTodos('todos/luigi.json', (err, data) => {
+//   console.log(data)
+//   getTodos('todos/mario.json', (err, data) => {
+//     console.log(data)
+//     getTodos('todos/shaun.json', (err, data) => {
+//       console.log(data)
+//     })
+//   })
+// })
+
+// Promises
+
+const getSomething = () => {
+  return new Promise(() => {
+    // fetch something
   })
-})
+}
