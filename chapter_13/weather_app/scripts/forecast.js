@@ -1,3 +1,6 @@
+const key = ''
+
+// get city information
 const getCity = async (city) => {
   const base = 'http://dataservice.accuweather.com/locations/v1/cities/search'
   const query = `?apikey=${key}&q=${city}`
@@ -8,7 +11,21 @@ const getCity = async (city) => {
   return data[0]
 }
 
-getCity('Glasgow')
+// get weather information
+const getWeather = async (id) => {
+  const base = `http://dataservice.accuweather.com/currentconditions/v1/${id}`
+  const query = `?apikey=${key}`
+
+  const response = await fetch(base + query)
+  const data = await response.json()
+
+  return data[0]
+}
+
+const weather = getCity('Glasgow')
+  .then((data) => {
+    return getWeather(data.Key)
+  })
   .then((data) => {
     console.log(data)
   })
