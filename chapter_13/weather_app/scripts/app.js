@@ -1,4 +1,23 @@
 const cityForm = document.querySelector('form')
+const card = document.querySelector('.card')
+const details = document.querySelector('.details')
+
+const updateUI = ({ cityInfo, weather }) => {
+  // update details template
+  details.innerHTML = `
+      <h5 class="my-3">${cityInfo.LocalizedName}</h5>
+      <div class="my-3">${weather.WeatherText}</div>
+      <div class="display-4 my-4">
+        <span>${weather.Temperature.Metric.Value}</span>
+        <span>&deg;c</span>
+      </div>
+  `
+
+  // remove d-none if present
+  if (card.classList.contains('d-none')) {
+    card.classList.remove('d-none')
+  }
+}
 
 const updateCity = async (city) => {
   const cityInfo = await getCity(city)
@@ -22,10 +41,9 @@ cityForm.addEventListener('submit', (e) => {
   updateCity(city)
     .then((data) => {
       console.log(data)
+      updateUI(data)
     })
     .catch((err) => {
       console.log(err)
     })
-  // const cityHeader = document.querySelector('h5')
-  // cityHeader.textContent = city
 })
