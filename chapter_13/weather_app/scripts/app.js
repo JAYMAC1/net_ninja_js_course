@@ -2,7 +2,10 @@ const cityForm = document.querySelector('form')
 const card = document.querySelector('.card')
 const details = document.querySelector('.details')
 
-const updateUI = ({ cityInfo, weather }) => {
+const updateUI = (data) => {
+  // destructuring
+  const { cityInfo, weather } = data
+
   // update details template
   details.innerHTML = `
       <h5 class="my-3">${cityInfo.LocalizedName}</h5>
