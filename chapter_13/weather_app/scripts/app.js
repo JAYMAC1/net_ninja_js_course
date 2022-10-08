@@ -1,11 +1,9 @@
 const cityForm = document.querySelector('form')
 const card = document.querySelector('.card')
 const details = document.querySelector('.details')
-
 const time = document.querySelector('.time')
 const icon = document.querySelector('.icon img')
 
-console.log(icon)
 const updateUI = (data) => {
   // destructuring
   const { cityInfo, weather } = data
@@ -57,14 +55,25 @@ cityForm.addEventListener('submit', (e) => {
   // get city value from input (name='city) & reset form
   const city = cityForm.city.value.trim()
   cityForm.reset()
-
   // update the ui with new city
   updateCity(city)
     .then((data) => {
-      console.log(data)
       updateUI(data)
     })
     .catch((err) => {
       console.log(err)
     })
+  // set local storage
+  localStorage.setItem('city', city)
 })
+
+const localCity = localStorage.getItem('city')
+if (localCity) {
+  updateCity(localCity)
+    .then((data) => {
+      updateUI(data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
